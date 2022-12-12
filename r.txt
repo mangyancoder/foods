@@ -1,0 +1,4 @@
+package, gawa ng bagong input para sa package
+review : product /view/1
+admin: add ng graph, report
+top selling products or packages
