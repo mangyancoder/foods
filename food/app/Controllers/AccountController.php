@@ -327,6 +327,7 @@ class AccountController extends Controller
     $rules = [
       'name'          => 'required|min_length[2]|max_length[50]',
       'email'         => 'required|min_length[4]|max_length[100]|valid_email|is_unique[accounts.email]',
+      'phone'         =>'required|min_length[11]|max_length[12]',
       'password'      => 'required|min_length[4]|max_length[50]',
       'confirmpassword'  => 'matches[password]'
     ];
@@ -338,6 +339,8 @@ class AccountController extends Controller
         'username'     => $this->request->getVar('name'),
         'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
         'email'    => $this->request->getVar('email'),
+        'phone'   => $this->request->getVar('phone'),
+        'address'   => $this->request->getVar('address'),
         'type'     => 'client',
         'astatus'   => 'inactive',
         'token'    => $token

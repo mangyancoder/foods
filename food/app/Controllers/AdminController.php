@@ -57,6 +57,13 @@ class AdminController extends BaseController
     return curl_exec ($ch);
     curl_close ($ch);
   }
+  public function graph()
+  {
+    $order = new SalesModel();
+    // $all = $order->findAll();
+    $all = $order->select('SUM(p_price) as total, YEAR(ocreated_at) as year')->groupBy('YEAR(ocreated_at), YEAR(p_price)')->findAll();
+    echo json_encode($all);
+  }
   public function reservation()
   {
     $rv = new ReservationModel();

@@ -54,7 +54,7 @@
             <input type="submit" class="btn btn__primary btn__hover2 btn__block" value="Login">
           </div>
         </form>
-        <form id="register-form" class="hidden" action="<?=base_url()?>/register" action="post">
+        <form id="reg ister-form" class="hidden" action="<?=base_url()?>/store" action="post">
           <div class="control">
             <div class="label">Complete Name</div>
             <input type="text" name="name" class="form-control" placeholder="complete name"/>
@@ -62,6 +62,14 @@
           <div class="control">
             <div class="label">Email Address</div>
             <input type="text" name="email" class="form-control" placeholder="Email"/>
+          </div>
+          <div class="control">
+            <div class="label">Phone</div>
+            <input type="text" name="phone" class="form-control" placeholder="Email"/>
+          </div>
+          <div class="control">
+            <div class="label">Address</div>
+            <input type="text" name="address" class="form-control" placeholder="Email"/>
           </div>
           <div class="control">
             <div class="label">Password</div>

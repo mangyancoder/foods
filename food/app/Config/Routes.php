@@ -67,6 +67,8 @@ $routes->match(['get', 'post'], '/checkout', 'Home::checkout');
 $routes->match(['get', 'post'], '/auth', 'AccountController::auth');
 $routes->match(['get', 'post'], '/validates', 'AccountController::validates');
 $routes->match(['get', 'post'], '/logout', 'AccountController::logout');
+$routes->match(['get', 'post'], '/register', 'AccountController::store');
+
 $routes->match(['get', 'post'], '/view/(:any)', 'Home::view/$1');
 
 $routes->get('/admin', 'AdminController::index',['filter' =>'authGuard']);
@@ -82,7 +84,7 @@ $routes->match(['get', 'post'], '/admin/sales/(:any)', 'AdminController::sales/$
 $routes->match(['get', 'post'], '/admin/pending', 'AdminController::pending',['filter' =>'authGuard']);
 $routes->match(['get', 'post'], '/admin/processing', 'AdminController::processing',['filter' =>'authGuard']);
 $routes->match(['get', 'post'], '/admin/processed', 'AdminController::processed',['filter' =>'authGuard']);
-
+$routes->match(['get', 'post'], '/admin/graph', 'AdminController::graph',['filter' =>'authGuard']);
 $routes->match(['get', 'post'], '/admin/pbooking', 'AdminController::pbooking',['filter' =>'authGuard']);
 $routes->match(['get', 'post'], '/admin/cbooking', 'AdminController::cbooking',['filter' =>'authGuard']);
 $routes->match(['get', 'post'], '/admin/dbooking', 'AdminController::dbooking',['filter' =>'authGuard']);

@@ -26,6 +26,9 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddProducts">
                   Create New Package
                 </button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddProducts">
+                  Create Item Package
+                </button>
               </div>
             </div>
             <div class="card-body">
