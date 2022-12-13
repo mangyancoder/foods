@@ -68,6 +68,7 @@ $routes->match(['get', 'post'], '/auth', 'AccountController::auth');
 $routes->match(['get', 'post'], '/validates', 'AccountController::validates');
 $routes->match(['get', 'post'], '/logout', 'AccountController::logout');
 $routes->match(['get', 'post'], '/register', 'AccountController::store');
+$routes->match(['get', 'post'], '/reset', 'AccountController::resetAccount');
 
 $routes->match(['get', 'post'], '/view/(:any)', 'Home::view/$1');
 
